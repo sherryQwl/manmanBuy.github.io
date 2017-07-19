@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+    <!-- 导入网站图标 -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--刘康维国内折扣CSS文件-->
+    <link rel="stylesheet" href="css/inlanddiscount-lkw/inlanddiscount-index.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!--刘康维国内折扣JS文件-->
+    <script src="js/inlanddiscount-lkw/inlanddiscount-index.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+    <!--<div class="swiper-container scroll-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">-->
+    <!-- 以下为结构开始 -->
+    <!--国内折扣顶部-刘康维-->
+    <header>
+        <div class="zk-top">
+            <a class="onea glyphicon glyphicon-menu-left" href="./index.html"> </a>
+            <h1>国内折扣</h1>
+            <a class="twoa" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="productlist-box">
+            <div class="productlist">
+                <ul>
+                    <!--此处为模板内容-->
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="./login.html">登录</a>
+            <a href="./register.html">注册</a>
+            <a class="backtop" href="javascript:void(0)">返回顶部</a>
+        </div>
+        <div class="footer-info">
+            <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 以上为结构开始 -->
+    <!--</div>-->
+    <!-- swiper-slide -->
+    <!--</div>-->
+    <!-- swiper-wrapper -->
+    <!--<div class="swiper-scrollbar scroll-bar"></div>-->
+    <!--</div>-->
+    <!-- swiper-container -->
+
+    <!-- 调用swiper上下滚动效果的js代码 -->
+    <!--<script src="./js/scroll-swiper.js"></script>-->
+</body>
+
+</html>
+<script type=text/html id="productlist">
+    {{each result}}
+    <li>
+        <a href="./detailsPage/inlanddiscount_detailsPage/inlanddiscount_detailsPage.html?kwkey={{$value.productId}}">
+            <div class="pic">
+                {{@$value.productImg}}
+            </div>
+            <div>
+                <p>{{$value.productName}}</p>
+            </div>
+            <div class="price">
+                <p>{{$value.productPrice}}</p>
+            </div>
+            <div class="time"><span>{{$value.productFrom}} | </span>{{$value.productTime}}<span></span></div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<script>
+</script>

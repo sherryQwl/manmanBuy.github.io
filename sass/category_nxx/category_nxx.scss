@@ -1,0 +1,63 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+//  在下面写以页面的scss
+
+html, body,.layout {
+    height: 100%;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    header {
+        height: p2r(100);
+    }
+}
+
+
+main {
+    flex: 1;
+    background-color: #F2F2F2;
+    padding: p2r(5);
+    .category-item {
+        border: 1px solid #D2D2D2;
+        border-radius: 3px;
+        .title {
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: p2r(40);
+                font-size: p2r(16);
+                text-align: left;
+                color: #000000;
+                border-radius: 3px;
+                border: none;
+                background-color: #EBEBEB;
+                span {
+                    transition: .5s;
+                }
+                span.rotate{
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        .content {
+            background-color: #F9F9F9;
+            a {
+                color: #000;
+                float: left;
+                display: block;
+                width: 33.3333%;
+                height: p2r(40);
+                border: 1px solid #CCCCCC;
+                text-align: center;
+                line-height: p2r(40);
+                font-size: p2r(12);
+                text-decoration: none;
+            }
+        }
+    }
+}

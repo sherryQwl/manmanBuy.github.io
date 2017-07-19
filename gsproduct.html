@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+    <!-- 图标 -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/gsproduct_lkh/gsproduct_lkh.css">
+
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 获取url数据 -->
+    <script src="./js/getUrlData.js"></script>
+    <!-- 首页的js -->
+    <script src="./js/gsproduct_lkh/gsproduct_lkh.js"></script>
+</head>
+
+<body>
+    <!--外层的swiper 控制整个页面的上下滚动效果 
+    <div class="swiper-container scroll-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">-->
+    <header>
+        <div class="header-top">
+            <a href="./index.html" class="backArrow glyphicon glyphicon-menu-left"></a>
+            <h2>凑单品</h2>
+        </div>
+    </header>
+
+    <main class="navbox">
+        <div class='main-title'>
+            <!--导航栏内容-->
+        </div>
+    </main>
+    <!--下方商品列表 -->
+    <section class="cdp-productlist">
+        <ul class="cdp-list-ul">
+            <!--商品列表模板内容-->
+        </ul>
+    </section>
+    <footer>
+        <div class="footer-links">
+            <a href="./login.html">登录</a>
+            <a href="./register.html">注册</a>
+            <a href="javascript:void(0)">返回顶部</a>
+        </div>
+        <div class="footer-info">
+            <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 以上为结构开始 -->
+    <!--</div>-->
+    <!-- swiper-slide -->
+    <!--</div>-->
+    <!-- swiper-wrapper -->
+    <!--<div class="swiper-scrollbar scroll-bar"></div>-->
+    <!--</div>-->
+    <!-- swiper-container -->
+    <!-- 调用swiper上下滚动效果的js代码 -->
+    <!--<script src="./js/scroll-swiper.js"></script>-->
+</body>
+
+</html>
+<!--店铺来源模板-->
+<script type="text/html" id="gspro-nav1">
+    <div class="shop btn-group">
+        <button type="button" class=" btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <span class='tit'>京东</span> <span class="caret"></span>
+  </button>
+        <ul class="dropdown-menu">
+            <li><a data-shopid={{result[0].shopId}} href="#">{{result[0].shopName}}</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a data-shopid={{result[1].shopId}} href="#">{{result[1].shopName}}</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a data-shopid={{result[2].shopId}} href="#">{{result[2].shopName}}</a></li>
+        </ul>
+    </div>
+</script>
+<!--区域+价格来源模板-->
+<script type='text/html' id="gspro-nav2">
+    <div class="area btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class='tit'>华北</span> <span class="caret"></span>
+  </button>
+        <ul class="dropdown-menu">
+            {{each result}}
+            <li><a data-areaid={{$value.areaId}} href="#">{{$value.areaName}}</a></li>
+            <li role="separator" class="divider"></li>
+            {{/each}}
+
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    全部价格 <span class="caret"></span>
+  </button>
+    </div>
+</script>
+
+<!--商品列表模板-->
+<script type="html/text" id="cdp-list">
+    {{each result}}
+    <li>
+        <a href="javascript:void(0);">
+            <div><img src="{{$value.productImg}}" alt=""></div>
+            <div>
+                <p>{{$value.productName}}</p>
+            </div>
+            <div>
+                <p>{{$value.productPrice}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

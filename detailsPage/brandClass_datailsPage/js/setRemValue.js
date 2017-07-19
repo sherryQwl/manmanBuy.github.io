@@ -1,0 +1,1 @@
+        document.documentElement.style.fontSize = $(window).width() / 10 + "px";

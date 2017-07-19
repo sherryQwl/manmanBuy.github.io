@@ -1,0 +1,157 @@
+@import "../../../sass/normalize6.0.scss";
+@import "../../../sass/base.scss";
+@import "../../../sass/header-footer.scss";
+header {
+    height: p2r(44);
+    padding: 0 p2r(16);
+    background-color: #ff841d;
+    .header-top {
+        height: p2r(44);
+        padding: 0;
+        position: relative;
+        background-color: transparent;
+        a {
+            position: absolute;
+            left: 0;
+            width: p2r(50);
+            height: p2r(44);
+            color: #fff;
+            font-size: p2r(17);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-left: - p2r(6);
+            
+        }
+        h2 {
+            width: 100%;
+            font-size: p2r(20);
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            line-height: p2r(44);
+        }
+    }
+}
+
+.product-info {
+    padding: p2r(10);
+    border-bottom: 1px solid #E0E0E0;
+    .title {
+        h3 {
+            font-size: p2r(16);
+            font-weight: 700;
+            color: #5A5A5A;
+            line-height: p2r(28)
+        }
+        span {
+            font-size: p2r(14);
+            margin-bottom: p2r(24);
+            color: #FF6C00;
+        }
+    }
+    .info {
+        span {
+            line-height: p2r(45);
+            color: #999999;
+            font-size: p2r(10);
+        }
+    }
+    .content {
+        p {
+            font-size: p2r(16);
+            line-height: p2r(24);
+        }
+        img {
+            float: right;
+            width: p2r(120);
+            height: p2r(120);
+        }
+    }
+    .buyBtn {
+        margin: p2r(20) p2r(10);
+        a {
+            display: block;
+            margin: 0 auto;
+            background-color: #FF9000;
+            color: #fff;
+        }
+    }
+}
+
+.comment {
+    padding: p2r(10);
+    .title {
+        margin-bottom: p2r(10);
+    }
+    .comment-box {
+        textarea {
+            float: left;
+            padding: p2r(5);
+            width: 100%;
+            resize: none;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border: none;
+            line-height: p2r(22);
+            font-size: p2r(14);
+            outline: 0;
+            color: #666;
+            height: p2r(68);
+            border: 2px solid #ECEAE8;
+            border-bottom: none;
+            border-radius: 2px;
+        }
+        .sendBox {
+            width: 100%;
+            float: right;
+            border: 2px solid #ECEAE8;
+            border-top: 1px solid #F2F2F2;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            background-color: #FBFBFB;
+            a {
+                text-decoration: none;
+                float: right;
+                display: block;
+                width: p2r(100);
+                height: p2r(40);
+                background-color: #FF841D;
+                text-align: center;
+                line-height: p2r(40);
+                color: #fff;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+.hotWords {
+    padding: p2r(10);
+    .title {
+        margin-bottom: p2r(10);
+    }
+}
+
+.currentPage {
+    padding: 0 p2r(10);
+    height: p2r(36);
+    background: linear-gradient(to top, #ECECEC, #FEFEFE);
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: p2r(18);
+    p {
+        font-size: p2r(12);
+        line-height: p2r(36);
+        height: p2r(36);
+        color: #000;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        a {
+            color: #000;
+        }
+    }
+}

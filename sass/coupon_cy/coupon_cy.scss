@@ -1,0 +1,89 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+#header-top {
+    background-color: #f4483e;
+    height: p2r(45);
+    position: relative;
+    .icon-back {
+        width: p2r(45);
+        height: p2r(45);
+        color: #fff;
+        text-decoration: none;
+        font-size: p2r(17);
+        position: absolute;
+        left: p2r(10);
+        text-align: center;
+        line-height: p2r(45);
+    }
+    h1 {
+        font-size: p2r(20);
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        margin: 0 auto;
+        display: block;
+    }
+    .appDownLoad {
+        position: absolute;
+        right: p2r(16);
+    }
+}
+
+.quan-box {
+    text-align: left;
+    .quan-model {
+        margin: p2r(10) auto;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border: 1px solid #eee;
+                display: block;
+                height: p2r(75);
+                width: p2r(113);
+                margin-left: p2r(5);
+                margin-top: p2r(5);
+                overflow: hidden;
+                padding-top: p2r(5);
+                text-align: center;
+                font-size: p2r(12);
+                a {
+                    display: block;
+                    height: 100%;
+                    color: #5a5a5a;
+                    text-decoration: none;
+                    img {
+                        max-height: p2r(50);
+                        width: p2r(50);
+                        margin-left: p2r(32);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#quan-nav {
+    margin-top: p2r(20);
+    height: p2r(36);
+    background-color: #ebebeb;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: p2r(36);
+    padding-left: p2r(8);
+    font-size: p2r(14);
+    a {
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}

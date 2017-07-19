@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+    <!-- 图标 -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/index_lkh/index_lkh.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 获取url数据 -->
+    <script src="./js/getUrlData.js"></script>
+    <!-- 首页的js -->
+    <script src="./js/index_lkh/index_lkh.js"></script>
+</head>
+
+<body>
+    <!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+    <div class="swiper-container scroll-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!-- 以下为结构开始 -->
+                <header>
+                    <div class="header-top">
+                        <div class="logo">
+                            <h1><a href="./index.html"><img src="./images/header_logo.png" alt=""></a></h1>
+                        </div>
+                        <div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./images/header_app.png" alt=""></a></div>
+                    </div>
+                    <div class="search-box">
+                        <input type="search" placeholder="请输入你要比价的商品">
+                        <a>搜索</a>
+                    </div>
+                </header>
+
+                <nav class="clearfix">
+
+                </nav>
+
+                <!-- 超值折扣开始 -->
+                <div class="superValue">
+                    <div class="title">
+                        <h3>超值折扣推荐</h3>
+                        <a href="./moneyctrl.html"><img src="./images/more.png" alt=""></a>
+                    </div>
+                    <div class="superValue-items">
+                        <!--<div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="./images/2017070020400625233.jpg" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">古韵金辉 实木双人床 裸床+抽屉 1.8*2m <span>568元包邮</span></h4>
+                                <div class="message">
+                                    <p>
+                                        <span>天猫商城</span>
+                                        <span> | </span>
+                                        <span>07-03 18: 18</span>
+                                    </p>
+                                    <p class="glyphicon glyphicon-comment">0</p>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+
+                <!-- 更多优惠信息 -->
+                <div class="moreMessage">
+                    <a href="./moneyctrl.html" class="btn btn-default">更多优惠信息</a>
+                </div>
+
+                <!-- 品牌排行 -->
+                <div class="brandRanking">
+                    <div class="title">
+                        <h3>品牌排行</h3>
+                        <a href="./brandTitle.html"><img src="./images/more.png" alt=""></a>
+                    </div>
+                    <div class="brandRanking-items">
+
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="footer-links">
+                        <a href="javascript:void(0)">登录</a>
+                        <a href="javascript:void(0)">注册</a>
+                        <a href="javascript:void(0)">返回顶部</a>
+                    </div>
+                    <div class="footer-info">
+                        <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                        <p>m.manmanbuy.com</p>
+                    </div>
+                </footer>
+                <!-- 以上为结构开始 -->
+            </div>
+            <!-- swiper-slide -->
+        </div>
+        <!-- swiper-wrapper -->
+        <div class="swiper-scrollbar scroll-bar"></div>
+    </div>
+    <!-- swiper-container -->
+    <!-- 调用swiper上下滚动效果的js代码 -->
+    <!--<script src="./js/scroll-swiper.js"></script>-->
+
+    <!--页面上固定的图标-->
+    <div style="position:fixed;right:0;bottom:30px;z-index:999" class="toTop">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813">
+          <img src="./images/qwl/2.png" width="60">
+        </a>
+    </div>
+</body>
+
+</html>
+
+<!-- 导航板块 -->
+<script type="text/html" id="nav-modal">
+    {{each result}}
+    <div class="nav-opation">
+        <a href="{{$value.titlehref}}"></a>{{$value.img}}
+        <p>{{$value.name}}</p>
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/html" id="superValue-modal">
+{{each result}}
+    <div class="media">
+        <a href="./detailsPage/inlanddiscount_detailsPage/inlanddiscount_detailsPage.html?index={{$index}}"></a>
+        <div class="media-left">
+            <span>
+                {{@$value.productImgSm}}
+            </span>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{$value.productName}} <span>{{$value.productPinkage}}</span></h4>
+            <div class="message">
+                <p>
+                    <span>{{$value.productFrom}}</span>
+                    <span> | </span>
+                    <span>{{$value.productTime}}</span>
+                </p>
+                <p class="glyphicon glyphicon-comment">{{$value.productComCount}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>

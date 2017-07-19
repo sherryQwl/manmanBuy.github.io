@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>品牌大全</title>
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/brandTitle_dj/dj-brandTitle.css">
+    <!-- jquery -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+</head>
+<body>
+            <!-- 以下为结构开始 -->
+            <header>
+                <div class="header-top">
+                    <div class="logo">
+                        <h1><a href="./index.html"><img src="./images/header_logo.png" alt=""></a></h1>
+                    </div>
+                    <div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./images/header_app.png" alt=""></a></div>
+                </div>
+                <div class="search-box">
+                    <input type="search" placeholder="请输入你要比价的商品">
+                    <a>搜索</a>
+                </div>
+            </header>
+         <nav id="nav">
+             <ul class="navs">
+                 <li><a href="./index.html">首页</a></li>
+                 <li><a href="javascript:void(0);">></a></li>
+                 <li><a href="brandTitle.html">品牌大全</a></li>
+             </ul>
+         </nav>
+         <main id="mains">
+             <div class="title">
+                 <h3>热门品牌排行榜</h3>
+             </div>
+                 <!--此处动态生成品牌大全-->
+         </main>
+
+            <footer>
+                <div class="footer-links">
+                    <a href="./login.html">登录</a>
+                    <a href="./register.html">注册</a>
+                    <a href="javascript:void(0)" class="top-Top">👆返回顶部</a>
+                </div>
+                <div class="footer-info">
+                    <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+<!--模版引擎-->
+<script type="text/html" id="djTemplate">
+   {{each result}}
+    <div class="item">
+        <a  href="./detailsPage/brandClass_datailsPage/brandClass.html">
+            <div class="item-lf" index="{{$value.brandTitleId}}">{{$value.brandTitle}}</div>
+            <span class="item-rt">🕸</span>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!-- 自己的js -->
+<script src="./js/brandTitle_dj/dj-brandTitle.js" charset="UTF-8"></script>
+</body>
+
+</html>

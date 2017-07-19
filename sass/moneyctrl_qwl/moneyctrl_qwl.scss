@@ -1,0 +1,173 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+//  顶部的样式
+header {
+    .header-top {
+        height: p2r(45);
+        position: relative;
+        .back {
+            width: p2r(50);
+            height: 100%;
+            line-height: p2r(42);
+            position: absolute;
+            left: p2r(10);
+            font-weight: normal;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-size: p2r(17);
+                text-align: center;
+                line-height: p2r(45);
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        h1 {
+            width: 100%;
+            font-size: p2r(19);
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+        }
+        .appDownLoad {
+            position: absolute;
+            right: p2r(16);
+        }
+    }
+}
+
+//中间图片的样式
+main {
+    .items {
+        // height: p2r(500);
+        .item {
+            height: p2r(128);
+            border-bottom: 1px solid #e6e6e6;
+            .media {
+                position: relative;
+                padding: p2r(16) p2r(8);
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 999;
+                    top: 0;
+                    left: 0;
+                }
+                .media-left {
+                    img {
+                        width: p2r(100);
+                        height: p2r(100);
+                    }
+                }
+                .media-body {
+                    position: relative;
+                    .media-heading {
+                        font-size: p2r(14);
+                        margin-bottom: p2r(30);
+                        span {
+                            color: #ff6c00;
+                        }
+                    }
+                    .other {
+                        color: #a1a1a1;
+                        font-size: p2r(12); // position: absolute;
+                        // bottom:p2r(20);
+                        .mall {
+                            float: left;
+                        }
+                        .comment {
+                            // position: absolute;
+                            // right:p2r(-100);
+                            float: right;
+                            i {
+                                vertical-align: top;
+                                margin-right: p2r(2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//下面盒子
+.moneyctrl_bottom {
+    background-color: #f2f2f2;
+    padding-bottom: p2r(18); //上下页
+    .moneyctrl_page {
+        .moneyctrl_page_ul {
+            margin-top: p2r(25);
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    display: block;
+                    width: p2r(95);
+                    height: p2r(36);
+                    border: 1px solid #d2d2d2;
+                    border-radius: p2r(5);
+                    background: linear-gradient(to bottom, white, #DEDEDE);
+                    color: black;
+                    line-height: p2r(36);
+                    text-align: center;
+                    box-shadow: 0 0 p2r(1) #666;
+                    text-decoration: none;
+                }
+                .Previous {
+                    margin-left: p2r(12);
+                } // #choose {
+                //     height: p2r(36);
+                //     width: p2r(130);
+                //     position: relative;
+                //     // text-align: center;
+                //     span{
+                //         font-size: p2r(16);
+                //         // line-height:p2r(8);
+                //         top:p2r(16);
+                //         // top:p2r(2);
+                //     }
+                //     .caret{
+                //         position: absolute;
+                //         right:p2r(10);
+                //         top:p2r(16);
+                //     }
+                // }
+                .select {
+                    height: p2r(36);
+                    width: p2r(130);
+                    display: flex;
+                }
+                .Next {
+                    margin-right: p2r(12);
+                }
+            }
+        }
+    } //首页>省钱控
+    #moneyctrl_back {
+        height: p2r(35);
+        line-height: p2r(35);
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+        background-image: linear-gradient(to bottom, white, #ececec); // margin-bottom: p2r(25);
+        position: relative;
+        .moneyctrl_back_info {
+            position: absolute;
+            left: p2r(8);
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            span {}
+        }
+    }
+}
+
+//如果下拉菜单中的 下一页按钮有disabled这个类
+.moneyctrl_page #choose.disabled {
+    cursor: not-allowed;
+}

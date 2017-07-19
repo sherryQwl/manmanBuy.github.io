@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>电视机比价选购--慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+    <!-- 导入网站图标 -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引入比价搜索列表的样式-->
+    <link rel="stylesheet" href="css/category_nxx/category_list_nxx.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 当前页面的js -->
+    <script src="./js/categroy_nxx/categroy_list_nxx.js"></script>
+    <!-- 导入获取url数据的文件 -->
+    <script src="./js/getUrlData.js"></script>
+</head>
+
+<body>
+    <!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+    <!--<div class="swiper-container scroll-container">-->
+    <!--<div class="swiper-wrapper">-->
+    <!--<div class="swiper-slide">-->
+    <!-- 以下为结构开始 -->
+    <div class="layout">
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <h1><a href="./index.html"><img src="./images/header_logo.png" alt=""></a></h1>
+                </div>
+                <div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./images/header_app.png" alt=""></a></div>
+            </div>
+            <div class="search-box">
+                <input type="search" placeholder="请输入你要比价的商品">
+                <a>搜索</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <main>
+                <div class="nav">
+                    <span><a href="index.html">综合</a></span>
+                </div>
+                <ul class="items bj">
+                    <!--<li class="item">
+                            <div class="left">
+                                <a href=""><img src="images/nxx/3.jpg" alt=""> </a>
+                            </div>
+
+                            <div class=".right">
+                                <span class="one">tcl D43DIJG 42英寸 高清720P 智能网络LED液晶电视</span>
+                                <div class="two"><span>1999</span></div>
+                                <div class="three"><span class="fl">7商城报价</span><span class="fr">有12345人评论</span></div>
+                            </div>
+                            <a href="#" class="a"></a>
+                        </li>-->
+
+                </ul>
+            </main>
+
+            <!--上下页-->
+            <div class="moneyctrl_page clearfix">
+                <ul class="moneyctrl_page_ul">
+                    <li>
+                        <a class="Previous disabled pull-left" role="button" href="javascript:void(0)">上一页</a>
+                    </li>
+                    <li>
+                        <!--<select class="choose pull-left">-->
+                        <div class="dropup pull-left">
+                            <!--<button class="btn btn-default dropdown-toggle" id="choose" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                                        <span>1</span>
+                                        <span>/</span>
+                                        <span>1</span>
+                                        <span class="caret"></span>
+                                    </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>-->
+                            <select class="form-control select"></select>
+                        </div>
+                        <!--</select>-->
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="Next pull-right">下一页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <footer>
+
+            <div class="footer-links">
+                <a href="./login.html">登录</a>
+                <a href="./register.html">注册</a>
+                <a href="javascript:void(0)">返回顶部</a>
+            </div>
+            <div class="footer-info">
+                <p><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 以上为结构开始 -->
+    <!--</div>-->
+    <!-- swiper-slide -->
+    <!--</div>-->
+    <!-- swiper-wrapper -->
+    <!--<div class="swiper-scrollbar scroll-bar"></div>-->
+    <!--</div>-->
+    <!-- swiper-container -->
+</body>
+
+</html>
+<!--定义模板-->
+<script type="text/html" id="template">
+    {{each result}}
+    <li class="item">
+        <a href="./detailsPage/category_detailsPage/category_detailsPage.html?nxxkey={{$value.productId}}"></a>
+        <div class="left">
+            {{$value.productImg}}
+        </div>
+        <div class="right">
+            <h3 class="one">{{$value.productName}}</h3>
+            <div class="two"><span>{{$value.productPrice}}</span></div>
+            <div class="three"><span class="fl">{{$value.productQuote}}</span><span class="fr">{{$value.productCom}}</span></div>
+        </div>
+    </li>
+    {{/each}}
+</script>

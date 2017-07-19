@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- 移动端视口 不缩放页面-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢卖-白菜价</title>
+	<!-- 计算1rem为多少   本页面中1rem 为  360px -->
+	<script src="./js/setRemValue.js"></script>
+	<!-- 导入网站图标 -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" class="ico" />
+	<!-- swiper的样式 -->
+	<link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+	<!-- 滚动条的一些样式 -->
+	<link rel="stylesheet" href="./css/scroll-swiper.css">
+	<!-- bootstrap样式 -->
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+	<!-- 页面样式 -->
+	<link rel="stylesheet" href="./css/baicaijia_mz/baicaijia_mz.css">
+	<!-- jquery -->
+	<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+	<!-- 模版引擎 -->
+	<script src="./lib/plug-in/template-web.js"></script>
+	<!-- bootstrap js文件 -->
+	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 基于jquery的swiper -->
+	<script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+
+	<!-- 首页的js -->
+	<script src="./js/baicaijia_mz/baicaijia_mz.js"></script>
+	<style>
+		/*左侧滑动导航栏*/
+		/*点击相应标题下方有红色边框线*/
+		/*点击搜索按钮显示的搜索框*/
+		/*searchbox display：none---block*/
+		/*页面加载图标*/
+		/*使用GIF动态图  加载前显示 ajax返回success关闭*/
+	</style>
+	<link rel="stylesheet" href="sass/header-footer.scss">
+	<link rel="stylesheet" href="sass/baicaijia_mz/baicaijia_mz.scss">
+</head>
+
+<body>
+	<!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+	<!--<div class="swiper-container scroll-container">-->
+	<!--<div class="swiper-wrapper">-->
+	<!--<div class="swiper-slide">-->
+	<!-- 以下为结构开始 头部标题开始-->
+	<header>
+		<div class="header-top">
+			<!--返回主页-->
+			<div class="back">
+				<a href="./index.html" class='glyphicon glyphicon-menu-left'></a>
+			</div>
+			<h1>白菜价-淘宝内部券</h1>
+			<div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./images/header_app.png" alt=""></a></div>
+		</div>
+		<!--<div class="search-box">-->
+		<!--<input type="search" placeholder="请输入你要比价的商品">-->
+		<!--<a>搜索</a>-->
+		<!--</div>-->
+	</header>
+	<!--头部标题结束-->
+	<!-- 导航栏 -->
+	<div class="bcj-head-cat swiper-container">
+		<!-- 左侧滑动导航栏 开始-->
+		<div class="tabs swiper-wrapper">
+			<ul class="nav-list swiper-slide">
+				<!--模板引擎添加-->
+			</ul>
+		</div>
+		<!-- 左侧滑动导航栏 结束-->
+		<!-- 右侧搜索按钮 -->
+		<div class="searchbtn glyphicon glyphicon-search"></div>
+		<!-- 点击搜索按钮显示的搜索框 -->
+		<div class="search-box">
+			<input type="search" placeholder="请输入你要比价的商品">
+			<a>搜索</a>
+		</div>
+	</div>
+	<!--左侧滑动导航栏 结束-->
+	<!--bannner 开始-->
+	<div class="banner">
+		<img src="./images/baicaijia_mz/banner.png" alt="">
+	</div>
+	<!--bannner 结束-->
+	<!-- 商品详情页面 开始-->
+	<div class="container">
+		<!-- 商品列表 -->
+		<div class="bcj-list">
+			<ul>
+				<!--模板-->
+			</ul>
+		</div>
+		<!-- 页面加载动态图标 -->
+		<div class="Page_loading">
+			<img src="./images/baicaijia_mz/loading.gif" alt="">
+		</div>
+	</div>
+	<!--回到顶部按钮-->
+	<a class='goTop glyphicon glyphicon-upload' href="javascript:;"></a>
+	<!-- 商品详情页面 结束-->
+	<footer>
+		<div class="footer-links">
+			<a href="./login.html">登录</a>
+			<a href="./register.html">注册</a>
+			<a href="javascript:void(0)">返回顶部</a>
+		</div>
+		<div class="footer-info">
+			<p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+	<!-- 以上为结构开始 -->
+	<!--</div>-->
+	<!-- swiper-slide -->
+	<!--</div>-->
+	<!-- swiper-wrapper -->
+	<!--<div class="swiper-scrollbar scroll-bar"></div>-->
+	<!--</div>-->
+	<!-- swiper-container -->
+</body>
+
+</html>
+
+<!-- 调用swiper上下滚动效果的js代码 -->
+<script src="./js/scroll-swiper.js"></script>
+
+<!-- 定义模板 左侧滑动导航栏-->
+<script type='text/html' id='nav-list'>
+	{{each result}}
+	<li titleId={{$value.titleId}}><a href="javascript:void(0);">{{$value.title}}</a></li>
+	{{/each}}
+</script>
+
+<!-- 定义模板 商品详情-->
+<script type='text/html' id='bcj-list'>
+	{{each result}}
+	<li class="media">
+		<div class="media-left itemLeft">
+			<a href="#">{{#$value.productImg}}</a>
+		</div>
+		<div class="media-body itemText">
+			<h4 class="media-heading">{{#$value.productName}}</h4>
+			<!--价格-->
+			<p class="pr">{{#$value.productPrice}}</p>
+			<!--已领-->
+			<p class='y'>{{#$value.productCouponRemain}}</p>
+			<!--优惠券-->
+			<div class="btn btn-default q">{{#$value.productCoupon}}</div>
+			<!--下单链接-->
+			<button type="button" class="btn btn-danger buy">{{#$value.productHref}}</button>
+		</div>
+	</li>
+	{{/each}}
+</script>
+
+
+<!--调用自己的js文件-->
+<script src='./js/baicaijia_mz/baicaijia_mz.js'></script>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>最新优惠-省钱控-慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+    <!-- 导入网站图标 -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/moneyctrl_qwl/moneyctrl_qwl.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!--moneyctrl的js-->
+    <script type="text/javascript" src="./js/moneyctrl_qwl/moneyctrl_qwl.js"></script>
+</head>
+
+<body>
+    <!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+    <!--<div class="swiper-container scroll-container">-->
+    <!--<div class="swiper-wrapper">-->
+    <!--<div class="swiper-slide">-->
+    <!-- 以下为结构开始 -->
+    <!--顶部的结构-->
+    <header>
+        <div class="header-top">
+            <div class="back"><a href="./index.html" class=" glyphicon glyphicon-menu-left"></a></div>
+            <h1> 省钱控 - 最新优惠</h1>
+            <div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./images/header_app.png" alt=""></a></div>
+        </div>
+    </header>
+
+    <!--中间图片部分-->
+    <main>
+        <!--媒体对象-->
+        <div class="items">
+            <!--移动模板-->
+            <!--<div class="item">
+                            <div class="media">
+                                <a href="#"></a>
+                                <div class="media-left">
+                                    <img class="media-object" src="./images/qwl/watch.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">NOERDEN 牛丁LIFE1 智能手表 <span>248元包邮(298-50)</span></h4>
+                                    <div class="other"><span class="mall">天猫旗舰店 | 07-03 19:31</span><span class="comment"><i class="glyphicon glyphicon-comment"></i>有6人评论</span></div>
+                                </div>
+                            </div>
+                        </div>-->
+        </div>
+    </main>
+    <!--下面盒子-->
+    <div class="moneyctrl_bottom">
+        <!--上下页-->
+        <div class="moneyctrl_page clearfix">
+            <ul class="moneyctrl_page_ul">
+                <li>
+                    <a class="Previous pull-left" role="button" href="javascript:void(0)">上一页</a>
+                </li>
+                <li>
+                    <!--<select class="choose pull-left">-->
+                    <div class="dropup pull-left">
+                        <!--<button class="btn btn-default dropdown-toggle" id="choose" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                                        <span>1</span>
+                                        <span>/</span>
+                                        <span>1</span>
+                                        <span class="caret"></span>
+                                    </button>-->
+                        <!--<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li>1/16</li>
+                                        <li>2/16</li>-->
+                        <!--<li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>-->
+                        <!--</ul>-->
+                        <select class="form-control select"></select>
+                    </div>
+                    <!--</select>-->
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="Next pull-right">下一页</a>
+                </li>
+            </ul>
+        </div>
+        <!--首页>省钱控-->
+        <div id="moneyctrl_back" class="nav" style="margin-top:20px;">
+            <div class="moneyctrl_back_info">
+                <a href="./index.html">首页</a>&nbsp;&gt;&nbsp;
+                <span>省钱控</span>
+            </div>
+        </div>
+    </div>
+
+    <!--底部的结构-->
+    <footer>
+        <div class="footer-links">
+            <a href="./login.html">登录</a>
+            <a href="./register.html">注册</a>
+            <a href="javascript:void(0)">返回顶部</a>
+        </div>
+        <div class="footer-info">
+            <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 以上为结构开始 -->
+    <!--</div>-->
+    <!-- swiper-slide -->
+    <!--</div>-->
+    <!-- swiper-wrapper -->
+    <!--<div class="swiper-scrollbar scroll-bar"></div>-->
+    <!--</div>-->
+    <!-- swiper-container -->
+
+    <!--页面上固定的图标-->
+    <div style="position:fixed;right:0;bottom:30px;z-index:999" class="toTop">
+        <a href="#">
+          <img src="./images/qwl/2.png" width="60">
+        </a>
+    </div>
+
+    <!-- 调用swiper上下滚动效果的js代码 -->
+    <!--<script src="./js/scroll-swiper.js"></script>-->
+</body>
+
+</html>
+<!--移动模板-->
+<script type="text/html" id="moneyctrl">
+    {{each result}}
+    <div class="item">
+        <div class="media">
+            <a href="./detailsPage/inlanddiscount_detailsPage/inlanddiscount_detailsPage.html?moneyctrl={{$value.productId}}"></a>
+            <div class="media-left">
+                {{@$value.productImgSm}}
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{$value.productName}} <span>{{$value.productPinkage}}</span></h4>
+                <div class="other">
+                    <span class="mall">{{$value.productFrom}} | {{$value.productTime}}</span>
+                    <span class="comment"><i class="glyphicon glyphicon-comment"></i>{{$value.productComCount}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>

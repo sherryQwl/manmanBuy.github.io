@@ -1,0 +1,97 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+//  在下面写以页面的scss
+* {
+    box-sizing: border-box;
+}
+
+header .header-top {
+    height: p2r(44);
+    color: white;
+    .back {
+        color: white;
+        font-size: p2r(20);
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    h1 {
+        font-size: p2r(20);
+        font-weight: bold;
+    }
+}
+
+main {
+    padding: p2r(10) p2r(30);
+    .items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            color: #000000;
+            height: p2r(40);
+            margin-right: p2r(4);
+            border: 1px solid #bfbfbf;
+            background: #f4f4f4;
+            line-height: p2r(40);
+            padding-left: p2r(8);
+            padding-right: p2r(8);
+            margin-bottom: p2r(5);
+            display: flex;
+            justify-content: center;
+            .logo {
+                display: flex;
+                justify-content: center;
+                margin-right: p2r(5);
+                align-items: center;
+            }
+            .font {
+                a {
+                    text-decoration: none;
+                    span {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tu {
+    width: p2r(64);
+    height: p2r(64);
+    position: fixed;
+    bottom: p2r(30);
+    right: 0;
+    z-index: 998;
+    a {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.nav {
+    height: p2r(35);
+    line-height: p2r(35);
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+    padding-left: p2r(10);
+    background: linear-gradient(to top,#eee,white);
+    span {
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.bj .item{
+    width: 100%;
+    height: p2r(150);
+    background: red;
+}

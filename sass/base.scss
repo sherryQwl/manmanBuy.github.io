@@ -1,0 +1,34 @@
+// 去除 margin padding
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// 去除下划线 点击高亮
+a,span{
+  text-decoration: none;
+  // 点击高亮
+  -webkit-tap-highlight-color: transparent;
+}
+ul,ol{
+  list-style: none;
+}
+// 输入框
+input{
+  border:none;
+  outline: none;
+}
+// img 变为块
+img{
+  display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+@function p2r($px) {
+    @return $px/36 * 1rem;
+}
+body {
+  min-width: p2r(360);
+}

@@ -1,0 +1,51 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+header {
+    height: p2r(44);
+    padding: 0 p2r(16);
+    background-color: #ff841d;
+    .header-top {
+        height: p2r(44);
+        padding: 0;
+        position: relative;
+        background-color: transparent;
+        a {
+            position: absolute;
+            left: 0;
+            width: p2r(44);
+            height: p2r(44);
+            color: #fff;
+            font-size: p2r(17);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-left: - p2r(6);
+        }
+        h2 {
+            width: 100%;
+            font-size: p2r(20);
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            line-height: p2r(44);
+        }
+    }
+}
+
+main {
+    .main-title {
+        display: flex;
+        .btn-group {
+            flex: 1;
+            &>button {
+                width: 100%;
+                border: none;
+            }
+            &>button.open {
+                background-color: transparent !important;
+            }
+        }
+    }
+}

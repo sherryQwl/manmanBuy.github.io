@@ -1,0 +1,9 @@
+
+
+        html, body, .scroll-container {
+            height: 100%;
+        }
+
+        .scroll-container>.swiper-wrapper>.swiper-slide {
+            height: auto;
+        }

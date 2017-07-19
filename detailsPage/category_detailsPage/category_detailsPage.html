@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./../../js/setRemValue.js"></script>
+    <!-- 图标 -->
+    <link href="./../../favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./../../lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./../../css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./../../lib/bootstrap/css/bootstrap.min.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="./../../css/header-footer.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/category_detailsPage.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./../../js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./../../lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./../../lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 页面的js -->
+    <script src="./js/category_detailsPage.js"></script>
+    <!-- 获取url数据 -->
+    <script src="./../../js/getUrlData.js"></script>
+</head>
+
+<!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+<div class="swiper-container scroll-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <!-- 以下为结构开始 -->
+            <header>
+                <div class="header-top">
+                    <div class="logo">
+                        <h1><a href="./../../index.html"><img src="./../../images/header_logo.png" alt=""></a></h1>
+                    </div>
+                    <div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./../../images/header_app.png" alt=""></a></div>
+                </div>
+                <div class="search-box">
+                    <input type="search" placeholder="请输入你要比价的商品">
+                    <a>搜索</a>
+                </div>
+            </header>
+            <div class="nav">
+                <span><a href="./../../index.html">首页</a></span>
+                <span><a href="index.html">></a></span>
+                <span><a href='./../../category.html'>平板电视</a></span>
+                <span><a href="javascript:void(0)">></a></span>
+                <span><a href='./sitenav.html'>TCL dadada</a></span>
+            </div>
+
+            <main>
+
+
+
+                <!--<div class="detail">
+                        <div class="pic"><img src="./../../images/nxx/3.jpg" alt=""></div>
+                        <div class="font1">TCL D4345 42英寸 高清720P 智能网络LED 液晶电视</div>
+                        <div class="font2">
+                            <div class="font_left">
+                                <span>当前最低：</span><span>￥1999:00</span>
+                            </div>
+                            <div class="font_right">
+                                <span>优选评论：</span><span>3130条</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buy">
+                        <div class="one"><span>比价购买</span></div>
+                        <div class="two"><span>产品参数</span></div>
+                        <div class="three"><span>评价</span><span>(2322)</span></div>
+                    </div>
+                    <div class="jd">
+                        <div class="left">
+                            <img src="./../../images/nxx/1.png" alt="">
+                            <span>京东自营</span>
+                        </div>
+                        <a href="#">
+                            <span>￥1999.00</span>
+                            <span>></span>
+                        </a>
+                    </div>-->
+                <div class="pingjia">
+                    <p>优选网友评价</p>
+                </div>
+                <div class="disguess">
+
+                </div>
+                <div class="more">
+                    <button type="">查看更多评价</button>
+        </div>
+        </main>
+        <div class="box"></div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="./../../login.html">登录</a>
+                <a href="./../../register">注册</a>
+                <a href="javascript:void(0)">返回顶部</a>
+            </div>
+            <div class="footer-info">
+                <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+        <!-- 以上为结构开始 -->
+    </div>
+    <!-- swiper-slide -->
+</div>
+<!-- swiper-wrapper -->
+<div class="swiper-scrollbar scroll-bar"></div>
+</div>
+<!-- swiper-container -->
+
+<!-- 调用swiper上下滚动效果的js代码 -->
+<!--<script src="./.././../js/scroll-swiper.js"></script>-->
+
+</html>
+
+<script type="text/html" id="navTitle-modal">
+    <span><a href="./../../index.html">首页</a></span>
+    <span><a href="javascript:void(0)">></a></span>
+    <span><a href='./../../category.html'>平板电视</a></span>
+    <span><a href="javascript:void(0)">></a></span>
+    <span><a href='javascript:void(0)'>{{productName}}</a></span>
+</script>
+
+
+
+<script type="text/html" id="productInfo-modal">
+    <div class="detail">
+        <div class="pic">{{@productImg}}</div>
+        <div class="font1">{{productName}}</div>
+        <div class="font2">
+            <div class="font_left">
+                <span>当前最低：</span><span></span>
+            </div>
+            <div class="font_right">
+                <span>优选评论：</span><span>3130条</span>
+            </div>
+        </div>
+    </div>
+    <div class="buy">
+        <div class="one"><span>比价购买</span></div>
+        <div class="two"><span>产品参数</span></div>
+        <div class="three"><span>评价</span><span>(2322)</span></div>
+    </div>
+    <div class="jd">
+        <div class="left">
+            <img src="./../../images/nxx/1.png" alt="">
+            <span>京东自营</span>
+        </div>
+        <a href="#">
+                            <span>￥1999.00</span>
+                            <span>></span>
+                        </a>
+    </div>
+</script>
+
+<script type="text/html" id="disguess-moadl">
+    {{each result}}
+    <div class="container clearfix">
+        <div class="left">{{$value.comName}}</div>
+        <div class="right">
+            <div class="time">{{$value.comTime}}</div>
+            <div>{{$value.comFrom}}</div>
+        </div>
+    </div>
+    <div class="font">
+        <p>{{$value.comContent}}</p>
+    </div>
+    <div class="huifu"><span>回复</span></div>
+    {{/each}}
+</script>

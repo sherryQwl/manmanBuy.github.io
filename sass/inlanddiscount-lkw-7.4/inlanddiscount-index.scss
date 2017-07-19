@@ -1,0 +1,101 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+@import '../base.scss';
+.test {
+    background-color: red;
+}
+
+//国内折扣顶部
+.zk-top {
+    width: 100%;
+    height: p2r(44);
+    background-color: #ff841d;
+    display: flex;
+    h1 {
+        flex: 1;
+        font-size: p2r(20);
+        color: white;
+        font-weight: 900;
+        line-height: p2r(44);
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        width: p2r(50);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: p2r(17);
+        color: white;
+        margin-left: p2r(10);
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+}
+
+//商品列表
+.productlist-box {
+    min-width: p2r(360);
+    max-width: p2r(800); // height: auto;
+    // height: p2r(700); // background-color: orange;
+    margin: 0 auto;
+    ul {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 50%; // height: p2r(264);
+            padding-top: p2r(10);
+            padding-left: p2r(10);
+            border: 1px solid #eeeeee;
+            a {
+                text-decoration: none;
+                padding-top: p2r(25);
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .pic{
+                margin-bottom: p2r(5);
+            }
+            .pic img {
+                width: 140px;
+                height: 140px;
+            }
+            div:nth-child(2) p {
+                font-size: p2r(12);
+                font-weight: 900;
+                width: p2r(150);
+                color: black;
+                height: p2r(35);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            .price {
+                width: p2r(150);
+                color: #ff6c00;
+                font-size: p2r(14);
+                padding: p2r(5) 0;
+                text-align: left;
+            }
+            .time {
+                width: p2r(150);
+                text-align: left;
+                font-size: p2r(10);
+                color: #a1a1a1;
+            }
+        }
+    }
+}
+

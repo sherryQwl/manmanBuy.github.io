@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>电视机比价选购--慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./js/setRemValue.js"></script>
+    <!-- 导入网站图标 -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引入比价搜索列表的样式-->
+    <link rel="stylesheet" href="css/category_nxx/category_nxx.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 当前页面的js -->
+    <script src="./js/categroy_nxx/categroy_nxx.js"></script>
+</head>
+
+
+<body>
+    <!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+    <!--<div class="swiper-container scroll-container">-->
+    <!--<div class="swiper-wrapper">-->
+    <!--<div class="swiper-slide">-->
+    <!-- 以下为结构开始 -->
+    <div class="layout">
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <h1><a href="./index.html"><img src="./images/header_logo.png" alt=""></a></h1>
+                </div>
+                <div class="appDownLoad"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813"><img src="./images/header_app.png" alt=""></a></div>
+            </div>
+            <div class="search-box">
+                <input type="search" placeholder="请输入你要比价的商品">
+                <a>搜索</a>
+            </div>
+        </header>
+
+        <main>
+            <!--<div class="category-item">
+                        <div class="title"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">大家电<span class="glyphicon glyphicon-menu-down"></span></button></div>
+                        <div class="content clearfix">
+                            <a href="javascript:;void(0)">平板电视</a>
+                            <a href="javascript:;void(0)">平板电视</a>
+                            <a href="javascript:;void(0)">平板电视</a>
+                            <a href="javascript:;void(0)">平板电视</a>
+                            <a href="javascript:;void(0)">平板电视</a>
+                        </div>
+                    </div>-->
+        </main>
+
+
+
+
+        <footer>
+
+            <div class="footer-links">
+                <a href="./login.html">登录</a>
+                <a href="./register.html">注册</a>
+                <a href="javascript:void(0)">返回顶部</a>
+            </div>
+            <div class="footer-info">
+                <p><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 以上为结构开始 -->
+    <!--</div>-->
+    <!-- swiper-slide -->
+    <!--</div>-->
+    <!-- swiper-wrapper -->
+    <!--<div class="swiper-scrollbar scroll-bar"></div>-->
+    <!--</div>-->
+    <!-- swiper-container -->
+</body>
+
+</html>
+
+
+<script type="text/html" id="categoryItem-modal">
+    {{each result}}
+    <div class="category-item">
+        <div class="title"><a data-id="{{$value.titleId}}" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">{{$value.title}}<span class="glyphicon glyphicon-menu-down"></span></a></div>
+        <div class="content clearfix">
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+<script type="text/html" id="smallCategoryItem-moadl">
+    {{each result}}
+    <a href="./category_list.html?categoryKey={{$value.categoryId}}">{{$value.category}}</a> {{/each}}
+</script>

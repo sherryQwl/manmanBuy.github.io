@@ -1,0 +1,151 @@
+@import "./../../../sass/normalize6.0.scss";
+@import "./../../../sass/base.scss";
+@import "./../../../sass/header-footer.scss";
+//  在下面写以页面的scss
+.nav {
+    height: p2r(35);
+    line-height: p2r(35);
+    border-top: 1px solid white;
+    padding-left: p2r(10);
+    background: linear-gradient(to top, #eee, white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    span {
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.detail {
+    height: p2r(288);
+    background: white;
+    padding-left: p2r(20);
+    padding-right: p2r(20);
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    .pic {
+        img {
+            width: p2r(180);
+            height: p2r(180);
+        }
+    }
+    .font1 {
+        color: black;
+        font-size: p2r(16);
+    }
+    .font2 {
+        color: #575757;
+        font-size: p2r(14);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .font_left {
+            float: left;
+        }
+        .font_right {
+            float: right;
+        }
+    }
+}
+
+.buy {
+    display: flex;
+    justify-content: center;
+    height: p2r(34);
+    color: white;
+    border: 1px solid #c14d00;
+    line-height: p2r(34);
+    text-align: center;
+    .one {
+        flex: 1;
+        background: #ff9f21;
+    }
+    .two {
+        flex: 1;
+        background: #ffc72e;
+        border-left: 1px solid #c14d00;
+        border-right: 1px solid #c14d00;
+    }
+    .three {
+        width: 33%;
+        flex: 1;
+        background: #ffc014;
+    }
+}
+
+.jd {
+    height: p2r(53);
+    padding: 0 p2r(10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: p2r(8);
+        }
+        span {}
+    }
+    a {
+        span:nth-of-type(1) {
+            color: #fe0202;
+        }
+    }
+}
+
+.pingjia {
+    height: p2r(34);
+    background: #dbdbdb;
+    border-top: 4px solid #7a7a7a;
+    line-height: p2r(34);
+    text-align: center;
+    color: black;
+    p {}
+}
+
+.container {
+    color: #666666;
+    font-size: p2r(12);
+    width: 100%;
+    padding: p2r(10) p2r(10);
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+}
+
+.font {
+    padding-left: p2r(10);
+    padding-right: p2r(10);
+}
+
+.huifu {
+    color: #666;
+    font-size: p2r(12);
+    padding: p2r(10) p2r(10);
+    border-bottom: 1px dashed #ccc;
+}
+
+.more {
+    background: #f2f2f2;
+    height: p2r(60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        height: p2r(32);
+        width: p2r(344);
+        line-height: p2r(32);
+        border: 1px solid #bababa;
+        border-radius: p2r(6);
+        font-size: p2r(12);
+    }
+}

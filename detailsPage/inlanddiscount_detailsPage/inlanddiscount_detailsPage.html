@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./../../js/setRemValue.js"></script>
+    <!-- 图标 -->
+    <link href="./../../favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./../../lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./../../css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./../../lib/bootstrap/css/bootstrap.min.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="./../../css/header-footer.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/inlanddiscount_detailsPage.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./../../js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./../../lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./../../lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 获取url数据 -->
+    <script src="./../../js/getUrlData.js"></script>
+    <!-- 页面的js -->
+    <script src="./js/inlanddiscount_detailsPage.js"></script>
+</head>
+
+<body>
+    <!-- 外层的swiper 控制整个页面的上下滚动效果 -->
+    <div class="swiper-container scroll-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <header>
+                    <div class="header-top">
+                        <a href="./../../index.html" class="backArrow glyphicon glyphicon-menu-left"></a>
+                        <h2></h2>
+                    </div>
+                </header>
+
+                <div class="product-info">
+                    <!--<div class="title">
+                        <h3>Circus by Sam EdeIman Charlie-16 女士休闲鞋</h3>
+                        <span>$22.99(约&yen;240)</span>
+                    </div>
+                    <div class="info">
+                        <span>6pm</span>
+                        <span>07-02 21:26</span>
+                        <span>谈资日历/慢慢买</span>
+                    </div>
+                    <div class="content clearfix">
+                        <img src="./images/e596088239894b3d9271a4c7591123cf.jpg" alt="">
+                        <p>京东自营报价3999元，价格比以前降了不少。送给长辈的好礼物，附加功能：太空舱，局部加热.</p>
+                    </div>
+                    <div class="buyBtn">
+                        <a href="javascript:void(0);" class="btn ">前往购买</a>
+                    </div>-->
+                </div>
+
+
+                <div class="comment">
+                    <div class="title">
+                        <h4>发表评论</h4>
+                    </div>
+                    <div class="comment-box clearfix">
+                        <textarea></textarea>
+                        <div class="sendBox clearfix">
+                            <a href="javascript:alert('请登录后再进行评论');">发表评论</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hotWords">
+                    <div class="title">
+                        <h4>热门评论</h4>
+                    </div>
+                    <div class="items">
+
+                    </div>
+                </div>
+
+                <div class="currentPage">
+                    <!--<p>
+                        <a href="./../../index.html">首页</a>
+                        <span> &gt; </span>
+                        <a href="./../../moneyctrl.html">省钱控</a>
+                        <span> &gt; </span>
+                    </p>-->
+                </div>
+
+
+                <footer>
+                    <div class="footer-links">
+                        <a href="./../../login.html">登录</a>
+                        <a href="./../../register">注册</a>
+                        <a href="javascript:void(0)">返回顶部</a>
+                    </div>
+                    <div class="footer-info">
+                        <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                        <p>m.manmanbuy.com</p>
+                    </div>
+                </footer>
+
+            </div>
+
+            <!-- 以上为结构 -->
+        </div>
+        <!-- swiper-slide -->
+    </div>
+    <!-- swiper-wrapper -->
+    <div class="swiper-scrollbar scroll-bar"></div>
+    </div>
+    <!-- swiper-container -->
+</body>
+
+</html>
+
+
+<script type="text/html" id="content-modal">
+    <div class="title">
+        <h3>{{productName}}</h3>
+        <span>{{productPinkage}}</span>
+    </div>
+    <div class="info">
+        <span>{{productFrom}}</span>
+        <span>{{productTime}}</span>
+        <span>{{productTips}}</span>
+    </div>
+    <div class="content clearfix">
+        {{if productImg2 != ""}} {{@productImg2}} {{else if productImg != ""}} {{@productImg}} {{else if productImg3 != ""}} {{@productImg3}}
+        {{else if productImgLg != ""}} {{@productImgLg}} {{else if productImgSm != ""}} {{/if}}
+        <p>
+            {{if productInfo != ""}} {{productInfo}} {{else if productInfo2 != ""}} {{productInfo2}} {{else if productInfo3 != ""}} {{productInfo3}}
+            {{/if}}
+        </p>
+    </div>
+    <div class="buyBtn">
+        <a href="javascript:void(0);" class="btn ">前往购买</a>
+    </div>
+</script>
+
+<script type="text/html" id="location-modal">
+    <p>
+        <a href="./../../index.html">首页</a>
+        <span> &gt; </span>
+        <a href="./../../moneyctrl.html">省钱控</a>
+        <span> &gt; </span>
+        <span>{{productName}}</span>
+    </p>
+</script>

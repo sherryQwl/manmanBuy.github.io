@@ -1,0 +1,299 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+@function p2r($px) {
+  @return $px/36 * 1rem;
+}
+//  在下面写以页面的scss
+
+header {
+  .header-top {
+    height: p2r(45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4393c;
+    color: #fff;
+    //返回主页按钮
+    .back{
+      width: p2r(50);
+      height: 100%;
+      text-align: center;
+      a{
+        text-decoration: none;
+        display: block;
+        line-height:p2r(45);
+        height: 100%;
+        top:0;
+        font-size: p2r(17);
+        color: #fff;
+        cursor: pointer;
+        margin-left: - p2r(6);
+      }
+    }
+    //白菜价-淘宝内部券标题
+    h1{
+      flex: 1;
+      text-align: center;
+      font-size: p2r(20);
+      font-weight: bold;
+      color: #fff;
+    }
+    //app下载按钮
+    .appDownLoad a {
+      display: block;
+      width: p2r(36);
+      height: p2r(36);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+//导航栏
+.bcj-head-cat{
+  height: 38px;
+  border-bottom: 1px solid #eeeeee;
+  .tabs{
+    width: 100%;
+    .scroller{
+      float: left;
+      position: relative;
+      display: inline-block;
+    }
+    .nav-list{
+      width: auto;
+      li.active a{
+        color: #e4393c;
+        border-bottom: 2px solid #e4393c;
+      }
+      li{
+        float: left;
+        height: 38px;
+        line-height: 36px;
+        font-size: 14px;
+        a{
+          color: #333333;
+          display: inline-block;
+          text-decoration: none;
+          text-align: center;
+          float: left;
+          padding: 0;
+          margin: 0 12px;
+          width: auto;
+        }
+      }
+    }
+  }
+  //右侧搜索按钮
+  .searchbtn{
+    width: p2r(38);
+    height: 100%;
+    border-left: 1px solid #e6e6e6;
+    background-color: #fbfbfb;
+    //position: relative;
+    z-index: 999;
+    float: right;
+  }
+  //点击显示的搜索框
+  .search-box {
+    //display: none;
+    border-top: 1px solid #EBD2BE;
+    border-bottom: 1px solid #F0F0F0;
+    height: p2r(50);
+    padding: p2r(10);
+    position: relative;
+    z-index: 9;
+    input {
+      font-size: p2r(15);
+      padding-left: p2r(18);
+      color: #6F6F6F;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: p2r(30);
+      background-color: #F1F1F1;
+      border-radius: p2r(10);
+      vertical-align: top;
+    }
+    a {
+      background-color: #FF841D;
+      font-size: p2r(14);
+      color: #fff;
+      text-align: center;
+      line-height: p2r(30);
+      display: block;
+      width: p2r(64);
+      height: p2r(30);
+      position: absolute;
+      right: p2r(10);
+      top: p2r(10);
+      border-radius: p2r(10);
+    }
+  }
+}
+.banner{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  img{
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+//商品详情页面
+.container{
+  background-color: #ccc;
+  padding:0;
+  .bcj-list{
+    font-size: 14px;
+    max-width: 960px;
+    margin: 0px auto;
+    li{
+      margin: 6px auto;
+      background-color: #ffffff;
+      position: relative;
+      padding: 10px 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      .itemLeft{
+        float: left;
+        width: 135px;
+        height: 130px;
+        img{
+          width: 130px;
+          height: 130px;
+          border: none;
+        }
+      }
+      .itemText{
+        position: relative;
+        h4{
+          min-height: 28px;
+          max-height: 40px;
+          font-size: p2r(14);
+          //white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .pr{
+          font-size: p2r(24);
+          color: #fc353a;
+          margin-top: 4px;
+          position: relative;
+          width: 100%;
+          height: auto;
+          overflow: visible;
+          i{
+            font-style: normal;
+          }
+          del{
+            text-decoration: line-through;
+            font-size: p2r(13);
+            color: #a8a8a8;
+            margin-left: 12px;
+            vertical-align: middle;
+          }
+        }
+        .bar{
+          padding-bottom:3px;
+          i{
+            display: inline-block;
+            border: 1px solid #e4393c;
+            background-color: #ffb7b7;
+            width:p2r(95);
+            height:p2r(18);
+            border-radius: p2r(9);
+            color: #fff;
+
+            margin-right:5px;
+            overflow: hidden;
+            span{
+              display: inline-block;
+              background-color: #e4393c;
+              height:100%;
+            }
+          }
+          b{
+
+          }
+        }
+        .q{
+          border: 1px dotted #e4393c;
+          border-radius: 0;
+          padding: 6px 5px;
+          a{
+            color:#e4393c;
+            font-size: p2r(12);
+          }
+        }
+      }
+      .buy{
+        position: absolute;
+        right:5px;
+        background-color: #ff5e5d;
+        font-size: p2r(14);
+        padding: p2r(6);
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+//页面加载动态图标
+.Page_loading{
+  display: none;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #ccc;
+  img{
+    vertical-align: middle;
+    margin:0 auto;
+  }
+}
+//回到顶部按钮
+.goTop{
+  display: none;
+  font-size: 36px;
+  opacity: 0.7;
+  &::before{
+    position: fixed;
+    bottom: 30px;
+    right:14px;
+  }
+}
+//底部
+footer {
+  padding-top: p2r(10);
+  height: p2r(108);
+  font-size: p2r(12);
+  background-color: #EFEFEF;
+  .footer-links {
+    display: flex;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #cdcdcd;
+    a {
+      flex: 1;
+      color: #5A5A5A;
+      height: p2r(34);
+      line-height: p2r(34);
+      text-align: center;
+      border-left: 1px solid #CDCDCD;
+      &:nth-child(1) {
+        border-left: none;
+      }
+    }
+  }
+  .footer-info {
+    height: p2r(62);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: red;
+    }
+  }
+}

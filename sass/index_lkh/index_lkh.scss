@@ -1,0 +1,168 @@
+@import "../normalize6.0.scss";
+@import "../base.scss";
+@import "../header-footer.scss";
+//  在下面写以页面的scss
+
+/* 导航开始 */
+
+nav {
+    padding-bottom: p2r(20);
+    border-bottom: 4px solid #F7F7F7;
+    .nav-opation {
+        float: left;
+        margin-top: p2r(20);
+        width: 25%;
+        position: relative;
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        p {
+            text-align: center;
+            margin-top: p2r(6);
+        }
+    }
+}
+
+
+/* 导航结束 */
+
+
+/* 超值开始 */
+
+.superValue {
+    .title {
+        height: p2r(35);
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+        padding: 0 p2r(10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            font-size: p2r(18);
+            font-weight: 700;
+            color: #fff;
+        }
+        a {
+            width: p2r(20);
+            height: p2r(20);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .superValue-items {
+        .media {
+            position: relative;
+            >a {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            display: flex;
+            height: p2r(128);
+            padding: p2r(14) p2r(8);
+            border-bottom: 1px solid #ECECEC;
+            .media-left {
+                width: p2r(100);
+                span {
+                    display: block;
+                    width: p2r(100);
+                    height: p2r(100);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .media-body {
+                flex: 1;
+                padding: 0 p2r(10);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h4 {
+                    font-size: p2r(14);
+                    span {
+                        color: red;
+                    }
+                }
+                .message {
+                    p {
+                        font-size: p2r(12);
+                        color: #A1A1A1;
+                        &:nth-child(1) {
+                            float: left;
+                        }
+                        &:nth-child(2) {
+                            position: relative;
+                            &::before {
+                                position: absolute;
+                                left: - p2r(15);
+                                top: p2r(1);
+                            }
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 超值结束 */
+
+
+/* 更多优惠信息开始 */
+
+.moreMessage {
+    height: p2r(62);
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        width: 80%;
+    }
+}
+
+
+/* 更多优惠信息结束 */
+
+
+/* 品牌排行开始 */
+
+.brandRanking {
+    .title {
+        height: p2r(35);
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+        padding: 0 p2r(10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            font-size: p2r(18);
+            font-weight: 700;
+            color: #fff;
+        }
+        a {
+            width: p2r(20);
+            height: p2r(20);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+    /* 品牌排行结束 */

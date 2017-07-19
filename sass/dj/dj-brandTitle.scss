@@ -1,0 +1,81 @@
+@import "normalize6.0.scss";
+@import "base.scss";
+@import "header-footer.scss";
+//  在下面写以页面的scss
+
+//导航栏
+#nav{
+  width: 100%;
+  .navs{
+    width: 100%;
+    display: flex;
+    margin-bottom:p2r(0);
+    border-top: p2r(2) solid #ebebeb;
+    border-bottom: 1px solid #dbdbdb;
+    background-image: linear-gradient(to bottom,#fefefe,#ececec);
+    li{
+      justify-content: flex-start;
+      a{
+        display: block;
+        height:p2r(35);
+        font-size:p2r(12);
+        line-height:p2r(35);
+        color: #5a5a5a;
+        padding-left: p2r(8);
+        padding-right: p2r(8);
+      }
+    }
+    li:nth-child(2) a,li:nth-child(4) a{
+      color: #000;
+      padding-left: p2r(0);
+      padding-right: p2r(0);
+    }
+  }
+}
+
+//品牌排行区域
+main{
+  width: 100%;
+  background-color: #f2f2f2;
+   .title{
+    width: 100%;
+     padding:p2r(10) p2r(5);
+     h3{
+       height:p2r(40);
+       font-size:p2r(16);
+       line-height:p2r(40);
+       color: #874604;
+       border: 1px solid #cccccc;
+       background-color: #eeeeee;
+       padding-left:p2r(10);
+     }
+     .item{
+       height:p2r(40);
+       border-bottom: 1px solid #dbdbdb;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        .item-lf{
+          height: 100%;
+          font-weight:900;
+          font-size:p2r(16);
+          line-height:p2r(40);
+          color: #000000;
+          float: left;
+        }
+        .item-rt{
+          font-weight:900;
+          font-family:"华文楷体";
+          font-size:p2r(20);
+          line-height:p2r(40);
+          height: 100%;
+          color:#888888;
+          float: right;
+          margin-right:p2r(14);
+        }
+      }
+     }
+   }
+
+}

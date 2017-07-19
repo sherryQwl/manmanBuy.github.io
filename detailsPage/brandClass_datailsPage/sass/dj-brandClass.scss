@@ -1,0 +1,171 @@
+@import "normalize6.0.scss";
+@import "base.scss";
+@import "header-footer.scss";
+
+#mains{
+  .title{
+    .item-two{
+      height: p2r(62);
+      padding-left:p2r(40);
+      padding-top:p2r(14);
+      border-bottom: 1px solid #e7e7e7;
+      position: relative;
+      a{
+        text-decoration: none;
+        h4{
+          font-weight:900;
+          font-size:p2r(16);
+          color: #000;
+        }
+        p{
+          font-size:p2r(10);
+          margin-top:p2r(8);
+          color: #999999;
+        }
+        span{
+          position: absolute;
+          top:p2r(10);
+          left:p2r(10);
+          width:p2r(20);
+          height:p2r(20);
+          font-size:p2r(12);
+          line-height:p2r(20);
+          text-align: center;
+          background-color: #c9c9c9;
+          color: #ffffff;
+        }
+      }
+    }
+    .item-two:nth-child(3){
+      span{
+        background-color: #f10e0e;
+      }
+    }
+    .item-two:nth-child(4){
+      span{
+        background-color: #ff9314;
+      }
+    }
+    .item-two:nth-child(5){
+      span{
+        background-color: #8adf5b;
+      }
+    }
+    .item-two:nth-child(11){
+      border:none;
+    }
+  }
+  .SalesVolume{
+    //height:p2r(36);
+    h3{
+      border-top: 1px solid #c8c8c8;
+      border-bottom: 1px solid #c8c8c8;
+      //height: 100%;
+      font-weight:900;
+      font-size:p2r(12);
+      line-height:p2r(36);
+      color: #874604;
+      padding-left:p2r(10);
+    }
+    .item-three{
+      height:p2r(120);
+      padding: p2r(10);
+     a{
+       display: flex;
+       .one{
+       }
+       .two{
+         flex: 1;
+         padding: p2r(10);
+         p:nth-child(1){
+           height:p2r(44);
+           font-size:p2r(14);
+           line-height:p2r(22);
+           color: #333333;
+           text-overflow:ellipsis;
+           overflow: hidden;
+           display: -webkit-box;
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp:2;
+         }
+         p:nth-child(2){
+           font-size:p2r(14);
+           color: #ea3900;
+         }
+         p:nth-child(3){
+           font-size:p2r(12);
+           color: #999999;
+           i{
+             margin-left:p2r(12);
+           }
+         }
+       }
+     }
+    }
+  }
+  .reviewArea{
+    h3{
+      border-top: 1px solid #c8c8c8;
+      border-bottom: 1px solid #c8c8c8;
+      height: 100%;
+      font-weight:900;
+      font-size:p2r(12);
+      line-height:p2r(36);
+      color: #874604;
+      padding-left:p2r(10);
+    }
+    .item-four{
+      padding: p2r(10);
+      .ra-one{
+        display: flex;
+        text-decoration: none;
+          div{
+            img{
+
+            }
+          }
+        p{
+          flex: 1;
+          font-size:p2r(14);
+          color: #999999;
+          line-height:p2r(28);
+        }
+      }
+      .ra-two{
+        display: block;
+        border: 1px solid #e7e7e7;
+        background-color: #f8f8f8;
+        padding: p2r(12) p2r(10);
+        div{
+          display: flex;
+          justify-content: space-between;
+          span:nth-child(1){
+            font-size:p2r(12);
+            color: #4f6900;
+          }
+          span:nth-child(2){
+            font-size:p2r(10);
+            color: #999999;
+          }
+        }
+        p{
+          font-size:p2r(14);
+          line-height:p2r(22);
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+
+//此处添加无数据返回的类容
+#mains #hides-o,#mains #hides-t{
+  height:p2r(16);
+  font-weight:900;
+  font-size:p2r(12);
+  line-height:p2r(16);
+  text-align: center;
+  color: #ff3c3d;
+  display: none;
+}

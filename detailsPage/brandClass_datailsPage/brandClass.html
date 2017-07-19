@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- 计算1rem为多少   本页面中1rem 为  360px -->
+    <script src="./../../js/setRemValue.js"></script>
+    <!-- 图标 -->
+    <link href="./../../favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- swiper的样式 -->
+    <link rel="stylesheet" href="./../../lib/swiper/css/swiper.min.css">
+    <!-- 滚动条的一些样式 -->
+    <link rel="stylesheet" href="./../../css/scroll-swiper.css">
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="./../../lib/bootstrap/css/bootstrap.min.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="./../../css/header-footer.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="./../../js/jquery-1.12.4.min.js"></script>
+    <!-- 模版引擎 -->
+    <script src="./../../lib/plug-in/template-web.js"></script>
+    <!-- bootstrap js文件 -->
+    <script src="./../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 基于jquery的swiper -->
+    <script type="text/javascript" src="./../../lib/swiper/js/swiper.jquery.min.js"></script>
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/dj-brandTitle.css">
+    <!--自己的样式-->
+    <link rel="stylesheet" href="./css/dj-brandClass.css">
+</head>
+
+<body>
+            <!-- 以下为结构开始 -->
+            <header>
+                <div class="header-top">
+                    <div class="logo">
+                        <h1><a href="./../../index.html"><img src="./../../images/header_logo.png" alt=""></a></h1>
+                    </div>
+                    <div class="appDownLoad"><a href="javascript:void(0);"><img src="./../../images/header_app.png" alt=""></a></div>
+                </div>
+                <div class="search-box">
+                    <input type="search" placeholder="请输入你要比价的商品">
+                    <a>搜索</a>
+                </div>
+            </header>
+         <nav id="nav">
+             <ul class="navs">
+                 <li><a href="../../index.html">首页</a></li>
+                 <li><a href="javascript:void(0);">></a></li>
+                 <li><a href="../../brandTitle.html">品牌大全</a></li>
+                 <li><a href="javascript:void(0);">></a></li>
+                 <li><a href="javascript:void(0);"><span class="texts"></span>哪个品牌好</a></li>
+             </ul>
+         </nav>
+         <main id="mains">
+                <div  class="title">
+                    <h3><span class="texts"></span>哪个品牌好</h3>
+                    <!--此处动态生成品牌大全-->
+                    <p id="fixe" style="display: none;background-color: #1b6d85;color: #ff9f21;font-size: 22px;z-index:998">跳转是不可能跳转的，这辈子都不会跳转的，前面的网页又好看，页面又精美。干嘛要跳到后面去呢？ps：后面没有api了，我也很绝...(小炉子 真是熊  小炉子  真是熊小炉子 真是熊  小炉子  真是熊小炉子 真是熊  小炉子  真是熊小炉子 真是熊  小炉子  真是熊小炉子 真是熊  小炉子  真是熊)
+                    </p>
+                </div>
+                <div class="SalesVolume">
+                    <h3><span class="texts"></span>产品销量排行</h3>
+                    <!--此处动态生成品牌销量-->
+                    <div id="hides-o">此处无数据返回，老子也没办法,(熊孩子真的烦)</div>
+                </div>
+                <div class="reviewArea">
+                    <h3><span class="texts"></span>最新评论</h3>
+                    <!--此处动态生成评论信息-->
+                    <div id="hides-t">此处无数据返回，老子也没办法(熊孩子真的烦)</div>
+                </div>
+         </main>
+        <footer>
+            <div class="footer-links">
+                <a href="./../../login.html">登录</a>
+                <a href="./../../register">注册</a>
+                <a href="javascript:void(0)" class="top-Top">返回顶部</a>
+            </div>
+            <div class="footer-info">
+                <p><a href="javascript:void(0);">手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+
+    <!--品牌大全的模版引擎-->
+<script type="text/html" id="classId">
+ {{each result}}
+    <div class="item-two">
+        <a href="javascript:void(0)">
+            <h4>{{$value.brandName}}</h4>
+            <p>{{$value.brandInfo}}</p>
+            <span>{{$index+1}}</span>
+        </a>
+    </div>
+ {{/each}}
+</script>
+    <!--品牌详情的模版引擎-->
+<script type="text/html" id="class_Tid">
+    {{each result}}
+     <div class="item-three">
+         <a href="javascript:void(0)" style="text-decoration: none">
+             <div class="one">{{@$value.productImg}}</div>
+             <div class="two">
+                 <p>{{$value.productName}}</p>
+                 <p>{{$value.productPrice}}</p>
+                 <p>{{$value.productQuote}}<i>{{$value.productCom}}</i></p>
+             </div>
+         </a>
+     </div>
+    {{/each}}
+</script>
+     <!--评论区的模版引擎-->
+<script type="text/html" id="class_ids">
+ {{each result}}
+    <div class="item-four">
+        <a href="javascript:void(0)" class="ra-one" style="text-decoration: none">
+                <div>{{@$value.productImg}}</div>
+                <p>{{$value.productName}}</p>
+        </a>
+        <a href="javascript:void(0)" class="ra-two" style="text-decoration: none">
+                <div>
+                    <span>{{$value.comName}}</span>
+                    <span>{{$value.comTime}}</span>
+                </div>
+                <p>{{$value.comContent}}</p>
+        </a>
+    </div>
+    {{/each}}
+</script>
+</body>
+<!-- 自己的js -->
+<script src="./js/dj-branClass.js" charset="UTF-8"></script>
+</html>
